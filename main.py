@@ -22,18 +22,18 @@ def main():
                     skil = skil.replace(letter, js[letter])
             runic_skills.append(skil)
         context = {
-          "first_name": fake.first_name(),
-          "last_name": fake.last_name(),
-          "job": fake.job(),
-          "town": fake.city(),
-          "strength": random.randint(3, 18),
-          "agility": random.randint(3, 18),
-          "endurance": random.randint(3, 18),
-          "intelligence": random.randint(3, 18),
-          "luck": random.randint(3, 18),
-          "skill_1": runic_skills[0],
-          "skill_2": runic_skills[1],
-          "skill_3" : runic_skills[2]
+            "first_name": fake.first_name(),
+            "last_name": fake.last_name(),
+            "job": fake.job(),
+            "town": fake.city(),
+            "strength": random.randint(3, 18),
+            "agility": random.randint(3, 18),
+            "endurance": random.randint(3, 18),
+            "intelligence": random.randint(3, 18),
+            "luck": random.randint(3, 18),
+            "skill_1": runic_skills[0],
+            "skill_2": runic_skills[1],
+            "skill_3" : runic_skills[2]
         }
         render_template("charsheet.svg","images/{}result.svg".format(number), context)
 if __name__ == '__main__':
